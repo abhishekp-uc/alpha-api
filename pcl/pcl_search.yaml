@@ -1607,6 +1607,16 @@ paths:
                 party_role:
                   type: "string"
                   description: "Array of party codes with each party code separated by comma. Add the party codes in the array to narrow down your search further for the given party codes.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Party Codes.\n\n\tNOTE:\n\n\t* Party Codes can vary from court to court. Use party codes only if you know the exact party code used in the court regions which you will provide during requesting this API.\n\n\t* Party Codes are not applicable for Appellate Cases."
+                court_type:
+                  type: "string"
+                  description: "Court Types of PACER."
+                  enum:
+                    - All
+                    - Appellate
+                    - Bankruptcy
+                    - Civil
+                    - Criminal
+                    - Multidistrict
                 four_digit_ssn:
                   type: "integer"
                   description: "The last four digits of the Social Security Number can be used in the search criteria. But when using this field Last Name or Entity Name field is mandatory."
