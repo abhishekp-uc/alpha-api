@@ -1974,7 +1974,7 @@ components:
               type: "string"
               example: "PCL_GET_SEARCH_RESULTS"
             page_number:
-              description: "The page for which the result are retrieved, starts with 1 and maximum page numbers is 54 since PCL search gives maximum 5400 results for a search. Each page consists of 100 results."
+              description: "The page for which the result are retrieved, starts with 1 and maximum page numbers is 100 since PCL search gives maximum 5400 results for a search. Each page consists of 54 results."
               type: "integer"
               example: 2
             results_extracted:
