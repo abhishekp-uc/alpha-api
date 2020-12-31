@@ -1607,16 +1607,6 @@ paths:
                 party_role:
                   type: "string"
                   description: "Array of party codes with each party code separated by comma. Add the party codes in the array to narrow down your search further for the given party codes.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Party Codes.\n\n\tNOTE:\n\n\t* Party Codes can vary from court to court. Use party codes only if you know the exact party code used in the court regions which you will provide during requesting this API.\n\n\t* Party Codes are not applicable for Appellate Cases."
-                court_type:
-                  type: "string"
-                  description: "Court Types of PACER."
-                  enum:
-                    - All
-                    - Appellate
-                    - Bankruptcy
-                    - Civil
-                    - Criminal
-                    - Multidistrict
                 four_digit_ssn:
                   type: "integer"
                   description: "The last four digits of the Social Security Number can be used in the search criteria. But when using this field Last Name or Entity Name field is mandatory."
@@ -1665,7 +1655,7 @@ paths:
                     properties:
                       each_chapter:
                         type: "string"
-                  description: "Array of bankruptcy chapters with each chapter separated by comma. Add bankruptcy chapters in the array to narrow down your search further for the given chapters.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Bankruptcy Chapters.\n\n\tNote: Applicable only for Bankruptcy Court type."
+                  description: "Array of bankruptcy chapters with each chapter separated by comma. Add bankruptcy chapters in the array to narrow down your search further for the given chapters.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Bankruptcy Chapters.\n\n\tNote: This parameter is applicable since we only perform this search for Bankruptcy Court type."
                 case_filed_start_date:
                   type: "string"
                   format: date
@@ -1685,19 +1675,19 @@ paths:
                 case_dismissed_start_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed start date on or after the given date.\n\n\tNote: Applicable only for Bankruptcy Court type."
+                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed start date on or after the given date.\n\n\tNote: This parameter is applicable since we only perform this search for Bankruptcy Court type."
                 case_dismissed_end_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed end date on or before the given date.\n\n\tNote: Applicable only for Bankruptcy Court type."
+                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed end date on or before the given date.\n\n\tNote: This parameter is applicable since we only perform this search for Bankruptcy Court type."
                 case_discharged_start_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged start date on or after the given date.\n\n\tNote: Applicable only for Bankruptcy Court type."
+                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged start date on or after the given date.\n\n\tNote: This parameter is applicable since we only perform this search for Bankruptcy Court type."
                 case_discharged_end_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged end date on or before the given date.\n\n\tNote: Applicable only for Bankruptcy Court type."
+                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged end date on or before the given date.\n\n\tNote: This parameter is applicable since we only perform this search for Bankruptcy Court type."
               required:
                 - webhook_url
                 - unicourt_account_id
