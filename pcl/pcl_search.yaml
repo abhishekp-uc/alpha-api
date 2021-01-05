@@ -1832,7 +1832,7 @@ paths:
           example: "PCLJL6AU62LEKJNVDAQ6J5PGPC3HNRLRE1383"
         - name: page_number
           in: "query"
-          description: "The page for which the result should be retrieved, starts with 1 and maximum page numbers is 54 since PCL search gives maximum 5400 results for a search. Each page consists of 100 results."
+          description: "The page for which the result are retrieved, starts with 1 and maximum page numbers is 100 since PCL search gives maximum 5400 results for a search. Each page consists of 54 results."
           required: true
           schema:
             type: "integer"
