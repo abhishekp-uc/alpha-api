@@ -16,14 +16,12 @@ paths:
       parameters:
         - schema:
             type: "string"
-            example: s1560445454
           in: "query"
           name: unicourt_account_id
           required: true
           description: "Unicourt Account ID which has pacer credentials provided to it"
         - schema:
             type: "string"
-            example: 18-85468
           in: "query"
           name: case_number
           description: "If the court type is selected as All or if you need data for a specific case number format, then you need to use this option. Case numbers may be entered in each of the following formats:
@@ -33,7 +31,6 @@ paths:
                   \n\nnnnnn  case number (up to 5 digits)"
         - schema:
             type: "string"
-            example: "Glen Matthews v."
           in: "query"
           name: case_title
           description: "You can search using the case name even if you know one party.
@@ -42,13 +39,11 @@ paths:
                   \n\n\tA search for case title Acme, Inc. will result in all case titles starting with Acme, Inc."
         - schema:
             type: "string"
-            example: "Jacobs, Glen"
           in: "query"
           name: party_name
           description: "Party Name can be a name of the Person or an Entity name. Party Name can should be passed in either of the formats for appropriate results\n\n\t 1. Last Name or Entity Name\n\n\t 2. Last, First Name\n\n\t 3. Last, First Middle Name"
         - schema:
             type: "boolean"
-            example: True
             default: True
           in: "query"
           name: party_exact_match
@@ -57,7 +52,6 @@ paths:
             type: "array"
             items:
               type: "string"
-            example: '["Central District of California District","Northern District of California District"]'
           in: "query"
           name: court_regions
           description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Court Region."
@@ -65,34 +59,29 @@ paths:
             type: "array"
             items:
               type: "string"
-            example: '["101", "3333"]'
           in: "query"
           name: nature_of_suits
           description: "Array of nature of suit with each nature of suit separated by comma. Add the nature of suit in the array to narrow down your search further for the given nature of suit.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Nature Of Suits.\n\n\tNote: Applicable only for Appellate and Civil Court types. Ex: If you wanted to apply '1110 - Insurance' in nature of suits for Appeal Courts then we would required only '1110' in the request"
         - schema:
             type: "string"
             format: date
-            example: '2020-06-04'
           in: "query"
           name: case_filed_start_date
           description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date."
         - schema:
             type: "string"
             format: date
-            example: '2020-06-26'
           in: "query"
           name: case_filed_end_date
           description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date."
         - schema:
             type: "string"
             format: date
-            example: '2020-06-26'
           in: "query"
           name: case_terminated_start_date
           description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date."
         - schema:
             type: "string"
-            example: '2020-06-27'
             format: date
           in: "query"
           name: case_terminated_end_date
@@ -186,14 +175,12 @@ paths:
       parameters:
         - schema:
             type: "string"
-            example: s1560445454
           in: "query"
           name: unicourt_account_id
           required: true
           description: "Unicourt Account ID which has pacer credentials provided to it"
         - schema:
             type: "string"
-            example: 19-bk-20033
           in: "query"
           name: case_number
           description: "If the court type is selected as All or if you need data for a specific case number format, then you need to use this option. Case numbers may be entered in each of the following formats:
@@ -212,7 +199,6 @@ paths:
                   \n\no  office where the case was filed (1 digit)"
         - schema:
             type: "string"
-            example: "Glen Matthews v."
           in: "query"
           name: case_title
           description: "You can search using the case name even if you know one party.
@@ -221,7 +207,6 @@ paths:
                   \n\n\tA search for case title Acme, Inc. will result in all case titles starting with Acme, Inc."
         - schema:
             type: "string"
-            example: "Jacobs, Glen"
           in: "query"
           name: party_name
           description: "Party Name can be a name of the Person or an Entity name. Party Name can should be passed in either of the formats for appropriate results\n\n\t 1. Last Name or Entity Name\n\n\t 2. Last, First Name\n\n\t 3. Last, First Middle Name"
@@ -229,26 +214,22 @@ paths:
             type: "array"
             items:
               type: "string"
-            example: '["aty"]'
           in: "query"
           name: party_role
           description: "Array of party codes with each party code separated by comma. Add the party codes in the array to narrow down your search further for the given party codes.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Party Codes.\n\n\tNOTE:\n\n\t* Party Codes can vary from court to court. Use party codes only if you know the exact party code used in the court regions which you will provide during requesting this API."
         - schema:
             type: "boolean"
-            example: True
             default: True
           in: "query"
           name: party_exact_match
           description: "Search will be made on the exact match of the party names. If the parameter is set to False then any parties whose name starts with the given party name will be fetched in the results."
         - schema:
             type: "integer"
-            example: "5486"
           in: "query"
           name: four_digit_ssn
           description: "The last four digits of the Social Security Number can be used in the search criteria. But when using this field Last Name or Entity Name field is mandatory."
         - schema:
             type: "string"
-            example: "682689785"
           in: "query"
           name: ssn_or_ein
           description: "The 9 digit Social Security number or Federal Tax ID can be used in this search. The delimiter dash (-) can be used as the input to this API but wont be used during the search. A search for SSN 123-45-6789 or 12-3456789 will yield the same results as a search for 123456789."
@@ -256,7 +237,6 @@ paths:
             type: "array"
             items:
               type: "string"
-            example: '["Central District of California District","Northern District of California District"]'
           in: "query"
           name: court_regions
           description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Court Region."
@@ -264,34 +244,29 @@ paths:
             type: "array"
             items:
               type: "string"
-            example: '[07, 09]'
           in: "query"
           name: chapters
           description: "Array of bankruptcy chapters with each chapter separated by comma. Add bankruptcy chapters in the array to narrow down your search further for the given chapters.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Bankruptcy Chapters.\n\n\tNote: Applicable only for Bankruptcy Court type."
         - schema:
             type: "string"
             format: date
-            example: '2020-06-04'
           in: "query"
           name: case_filed_start_date
           description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date."
         - schema:
             type: "string"
             format: date
-            example: '2020-06-26'
           in: "query"
           name: case_filed_end_date
           description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date."
         - schema:
             type: "string"
             format: date
-            example: '2020-06-26'
           in: "query"
           name: case_terminated_start_date
           description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date."
         - schema:
             type: "string"
-            example: '2020-06-27'
             format: date
           in: "query"
           name: case_terminated_end_date
@@ -299,13 +274,11 @@ paths:
         - schema:
             type: "string"
             format: date
-            example: '2020-06-26'
           in: "query"
           name: case_dismissed_start_date
           description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed start date on or after the given date.\n\n\tNote: Applicable only for Bankruptcy Court type."
         - schema:
             type: "string"
-            example: '2020-06-27'
             format: date
           in: "query"
           name: case_dismissed_end_date
@@ -313,13 +286,11 @@ paths:
         - schema:
             type: "string"
             format: date
-            example: '2020-06-26'
           in: "query"
           name: case_discharged_start_date
           description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged start date on or after the given date.\n\n\tNote: Applicable only for Bankruptcy Court type."
         - schema:
             type: "string"
-            example: '2020-06-27'
             format: date
           in: "query"
           name: case_discharged_end_date
@@ -416,14 +387,12 @@ paths:
       parameters:
         - schema:
             type: "string"
-            example: s1560445454
           in: "query"
           name: unicourt_account_id
           required: true
           description: "Unicourt Account ID which has pacer credentials provided to it"
         - schema:
             type: "string"
-            example: 19-cv-00328
           in: "query"
           name: case_number
           description: "If the court type is selected as All or if you need data for a specific case number format, then you need to use this option. Case numbers may be entered in each of the following formats:
@@ -442,7 +411,6 @@ paths:
                   \n\no  office where the case was filed (1 digit)"
         - schema:
             type: "string"
-            example: "Glen Matthews v."
           in: "query"
           name: case_title
           description: "You can search using the case name even if you know one party.
@@ -451,7 +419,6 @@ paths:
                   \n\n\tA search for case title Acme, Inc. will result in all case titles starting with Acme, Inc."
         - schema:
             type: "string"
-            example: "Jacobs, Glen"
           in: "query"
           name: party_name
           description: "Party Name can be a name of the Person or an Entity name. Party Name can should be passed in either of the formats for appropriate results\n\n\t 1. Last Name or Entity Name\n\n\t 2. Last, First Name\n\n\t 3. Last, First Middle Name"
@@ -459,13 +426,11 @@ paths:
             type: "array"
             items:
               type: "string"
-            example: '["aty"]'
           in: "query"
           name: party_role
           description: "Array of party codes with each party code separated by comma. Add the party codes in the array to narrow down your search further for the given party codes.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Party Codes.\n\n\tNOTE:\n\n\t* Party Codes can vary from court to court. Use party codes only if you know the exact party code used in the court regions which you will provide during requesting this API."
         - schema:
             type: "boolean"
-            example: True
             default: True
           in: "query"
           name: party_exact_match
@@ -474,7 +439,6 @@ paths:
             type: "array"
             items:
               type: "string"
-            example: '["Central District of California District","Northern District of California District"]'
           in: "query"
           name: court_regions
           description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Court Region."
@@ -482,34 +446,29 @@ paths:
             type: "array"
             items:
               type: "string"
-            example: '["101", "3333"]'
           in: "query"
           name: nature_of_suits
           description: "Array of nature of suit with each nature of suit separated by comma. Add the nature of suit in the array to narrow down your search further for the given nature of suit.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Nature Of Suits.\n\n\tNote: Applicable only for Appellate and Civil Court types. Ex: If you wanted to apply '1110 - Insurance' in nature of suits for Appeal Courts then we would required only '1110' in the request"
         - schema:
             type: "string"
             format: date
-            example: '2020-06-04'
           in: "query"
           name: case_filed_start_date
           description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date."
         - schema:
             type: "string"
             format: date
-            example: '2020-06-26'
           in: "query"
           name: case_filed_end_date
           description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date."
         - schema:
             type: "string"
             format: date
-            example: '2020-06-26'
           in: "query"
           name: case_terminated_start_date
           description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date."
         - schema:
             type: "string"
-            example: '2020-06-27'
             format: date
           in: "query"
           name: case_terminated_end_date
@@ -592,14 +551,12 @@ paths:
       parameters:
         - schema:
             type: "string"
-            example: s1560445454
           in: "query"
           name: unicourt_account_id
           required: true
           description: "Unicourt Account ID which has pacer credentials provided to it"
         - schema:
             type: "string"
-            example: 19-cv-00328
           in: "query"
           name: case_number
           description: "If the court type is selected as All or if you need data for a specific case number format, then you need to use this option. Case numbers may be entered in each of the following formats:
@@ -618,7 +575,6 @@ paths:
                   \n\no  office where the case was filed (1 digit)"
         - schema:
             type: "string"
-            example: "Glen Matthews v."
           in: "query"
           name: case_title
           description: "You can search using the case name even if you know one party.
@@ -627,7 +583,6 @@ paths:
                   \n\n\tA search for case title Acme, Inc. will result in all case titles starting with Acme, Inc."
         - schema:
             type: "string"
-            example: "Jacobs, Glen"
           in: "query"
           name: party_name
           description: "Party Name can be a name of the Person or an Entity name. Party Name can should be passed in either of the formats for appropriate results\n\n\t 1. Last Name or Entity Name\n\n\t 2. Last, First Name\n\n\t 3. Last, First Middle Name"
@@ -635,13 +590,11 @@ paths:
             type: "array"
             items:
               type: "string"
-            example: '["aty"]'
           in: "query"
           name: party_role
           description: "Array of party codes with each party code separated by comma. Add the party codes in the array to narrow down your search further for the given party codes.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Party Codes.\n\n\tNOTE:\n\n\t* Party Codes can vary from court to court. Use party codes only if you know the exact party code used in the court regions which you will provide during requesting this API."
         - schema:
             type: "boolean"
-            example: True
             default: True
           in: "query"
           name: party_exact_match
@@ -650,34 +603,29 @@ paths:
             type: "array"
             items:
               type: "string"
-            example: '["Central District of California District","Northern District of California District"]'
           in: "query"
           name: court_regions
           description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Court Region."
         - schema:
             type: "string"
             format: date
-            example: '2020-06-04'
           in: "query"
           name: case_filed_start_date
           description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date."
         - schema:
             type: "string"
             format: date
-            example: '2020-06-26'
           in: "query"
           name: case_filed_end_date
           description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date."
         - schema:
             type: "string"
             format: date
-            example: '2020-06-26'
           in: "query"
           name: case_terminated_start_date
           description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date."
         - schema:
             type: "string"
-            example: '2020-06-27'
             format: date
           in: "query"
           name: case_terminated_end_date
@@ -760,14 +708,12 @@ paths:
       parameters:
         - schema:
             type: "string"
-            example: s1560445454
           in: "query"
           name: unicourt_account_id
           required: true
           description: "Unicourt Account ID which has pacer credentials provided to it"
         - schema:
             type: "string"
-            example: MDL-875
           in: "query"
           name: case_number
           description: "If the court type is selected as All or if you need data for a specific case number format, then you need to use this option. Case numbers may be entered in each of the following formats:
@@ -778,7 +724,6 @@ paths:
                   \n\n\tNOTE:  \n\n\t The MDL case number should be requested with only the seed number (ie: 875) or with the prefix F (ie: F12345). The digits can be 5 digits at the max."
         - schema:
             type: "string"
-            example: "Glen Matthews v."
           in: "query"
           name: case_title
           description: "You can search using the case name even if you know one party.
@@ -787,7 +732,6 @@ paths:
                   \n\n\tA search for case title Acme, Inc. will result in all case titles starting with Acme, Inc."
         - schema:
             type: "string"
-            example: "Jacobs, Glen"
           in: "query"
           name: party_name
           description: "Party Name can be a name of the Person or an Entity name. Party Name can should be passed in either of the formats for appropriate results\n\n\t 1. Last Name or Entity Name\n\n\t 2. Last, First Name\n\n\t 3. Last, First Middle Name"
@@ -795,13 +739,11 @@ paths:
             type: "array"
             items:
               type: "string"
-            example: '["aty"]'
           in: "query"
           name: party_role
           description: "Array of party codes with each party code separated by comma. Add the party codes in the array to narrow down your search further for the given party codes.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Party Codes.\n\n\tNOTE:\n\n\t* Party Codes can vary from court to court. Use party codes only if you know the exact party code used in the court regions which you will provide during requesting this API."
         - schema:
             type: "boolean"
-            example: True
             default: True
           in: "query"
           name: party_exact_match
@@ -809,27 +751,23 @@ paths:
         - schema:
             type: "string"
             format: date
-            example: '2020-06-04'
           in: "query"
           name: case_filed_start_date
           description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date."
         - schema:
             type: "string"
             format: date
-            example: '2020-06-26'
           in: "query"
           name: case_filed_end_date
           description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date."
         - schema:
             type: "string"
             format: date
-            example: '2020-06-26'
           in: "query"
           name: case_terminated_start_date
           description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date."
         - schema:
             type: "string"
-            example: '2020-06-27'
             format: date
           in: "query"
           name: case_terminated_end_date
@@ -902,14 +840,12 @@ paths:
       parameters:
         - schema:
             type: "string"
-            example: s1560445454
           in: "query"
           name: unicourt_account_id
           required: true
           description: "Unicourt Account ID which has pacer credentials provided to it"
         - schema:
             type: "string"
-            example: MDL-875
           in: "query"
           name: case_number
           description: "If the court type is selected as All or if you need data for a specific case number format, then you need to use this option. Case numbers may be entered in each of the following formats:
@@ -931,7 +867,6 @@ paths:
                   \n\n\tNOTE:  \n\n\t1.Case type and office values are ignored for Appellate case numbers.\n\n\t2.The MDL case number should be requested with only the seed number (ie: 875) or with the prefix F (ie: F12345). The digits can be 5 digits at the max."
         - schema:
             type: "string"
-            example: "Glen Matthews v."
           in: "query"
           name: case_title
           description: "You can search using the case name even if you know one party.
@@ -940,7 +875,6 @@ paths:
                   \n\n\tA search for case title Acme, Inc. will result in all case titles starting with Acme, Inc."
         - schema:
             type: "string"
-            example: "Jacobs, Glen"
           in: "query"
           name: party_name
           description: "Party Name can be a name of the Person or an Entity name. Party Name can should be passed in either of the formats for appropriate results\n\n\t 1. Last Name or Entity Name\n\n\t 2. Last, First Name\n\n\t 3. Last, First Middle Name"
@@ -948,13 +882,11 @@ paths:
             type: "array"
             items:
               type: "string"
-            example: '["aty"]'
           in: "query"
           name: party_role
           description: "Array of party codes with each party code separated by comma. Add the party codes in the array to narrow down your search further for the given party codes.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Party Codes.\n\n\tNOTE:\n\n\t* Party Codes can vary from court to court. Use party codes only if you know the exact party code used in the court regions which you will provide during requesting this API.\n\n\t* Party Codes are not applicable for Appellate Cases."
         - schema:
             type: "boolean"
-            example: True
             default: True
           in: "query"
           name: party_exact_match
@@ -963,34 +895,29 @@ paths:
             type: "array"
             items:
               type: "string"
-            example: '["Central District of California District","Northern District of California District"]'
           in: "query"
           name: court_regions
           description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Court Region."
         - schema:
             type: "string"
             format: date
-            example: '2020-06-04'
           in: "query"
           name: case_filed_start_date
           description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date."
         - schema:
             type: "string"
             format: date
-            example: '2020-06-26'
           in: "query"
           name: case_filed_end_date
           description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date."
         - schema:
             type: "string"
             format: date
-            example: '2020-06-26'
           in: "query"
           name: case_terminated_start_date
           description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date."
         - schema:
             type: "string"
-            example: '2020-06-27'
             format: date
           in: "query"
           name: case_terminated_end_date
@@ -1093,7 +1020,6 @@ paths:
               properties:
                 unicourt_account_id:
                   type: "string"
-                  example: s1560445454
                   description: "Unicourt Account ID which has pacer credentials provided to it"
                 webhook_url:
                   type: "string"
@@ -1325,7 +1251,6 @@ paths:
               properties:
                 unicourt_account_id:
                   type: "string"
-                  example: s1560445454
                   description: "Unicourt Account ID which has pacer credentials provided to it"
                 webhook_url:
                   type: "string"
@@ -1583,7 +1508,6 @@ paths:
               properties:
                 unicourt_account_id:
                   type: "string"
-                  example: s1560445454
                   description: "Unicourt Account ID which has pacer credentials provided to it"
                 webhook_url:
                   type: "string"
@@ -1829,7 +1753,6 @@ paths:
           required: true
           schema:
             type: "string"
-          example: "PCLJL6AU62LEKJNVDAQ6J5PGPC3HNRLRE1383"
         - name: page_number
           in: "query"
           description: "The page for which the result are retrieved, starts with 1 and maximum page numbers is 100 since PCL search gives maximum 5400 results for a search. Each page consists of 54 results."
@@ -1837,7 +1760,6 @@ paths:
           schema:
             type: "integer"
             maximum: 54
-          example: 1
       security:
         - api_key: []
       responses:
