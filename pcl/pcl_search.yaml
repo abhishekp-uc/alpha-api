@@ -67,25 +67,25 @@ paths:
             format: date
           in: "query"
           name: case_filed_start_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_filed_end_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_terminated_start_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_terminated_end_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated end date on or before the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
       security:
         - api_key: [ ]
       responses:
@@ -252,49 +252,49 @@ paths:
             format: date
           in: "query"
           name: case_filed_start_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_filed_end_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_terminated_start_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_terminated_end_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated end date on or before the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_dismissed_start_date
-          description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed start date on or after the given date.\n\n\tNote: Applicable only for Bankruptcy Court type."
+          description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20 \n\n\tNote: Applicable only for Bankruptcy Court type."
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_dismissed_end_date
-          description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed end date on or before the given date.\n\n\tNote: Applicable only for Bankruptcy Court type."
+          description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20 \n\n\tNote: Applicable only for Bankruptcy Court type."
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_discharged_start_date
-          description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged start date on or after the given date.\n\n\tNote: Applicable only for Bankruptcy Court type."
+          description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20 \n\n\tNote: Applicable only for Bankruptcy Court type."
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_discharged_end_date
-          description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged end date on or before the given date.\n\n\tNote: Applicable only for Bankruptcy Court type."
+          description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20 \n\n\tNote: Applicable only for Bankruptcy Court type."
       security:
         - api_key: [ ]
       responses:
@@ -454,25 +454,25 @@ paths:
             format: date
           in: "query"
           name: case_filed_start_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_filed_end_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_terminated_start_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_terminated_end_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated end date on or before the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
       security:
         - api_key: [ ]
       responses:
@@ -611,25 +611,25 @@ paths:
             format: date
           in: "query"
           name: case_filed_start_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_filed_end_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_terminated_start_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_terminated_end_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated end date on or before the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
       security:
         - api_key: [ ]
       responses:
@@ -753,25 +753,25 @@ paths:
             format: date
           in: "query"
           name: case_filed_start_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_filed_end_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_terminated_start_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_terminated_end_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated end date on or before the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
       security:
         - api_key: [ ]
       responses:
@@ -903,25 +903,25 @@ paths:
             format: date
           in: "query"
           name: case_filed_start_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_filed_end_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_terminated_start_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
         - schema:
             type: "string"
             format: date
           in: "query"
           name: case_terminated_end_date
-          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated end date on or before the given date."
+          description: "Narrowing the search by limiting the cases which matches the criteria for case terminated end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
       security:
         - api_key: [ ]
       responses:
@@ -1094,35 +1094,35 @@ paths:
                 case_filed_start_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date."
+                  description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
                 case_filed_end_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date."
+                  description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
                 case_terminated_start_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date."
+                  description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
                 case_terminated_end_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search by limiting the cases which matches the criteria for case terminated end date on or before the given date."
+                  description: "Narrowing the search by limiting the cases which matches the criteria for case terminated end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
                 case_dismissed_start_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed start date on or after the given date.\n\n\tNote: Applicable only for Bankruptcy Court type."
+                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20 \n\n\tNote: Applicable only for Bankruptcy Court type."
                 case_dismissed_end_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed end date on or before the given date.\n\n\tNote: Applicable only for Bankruptcy Court type."
+                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20 \n\n\tNote: Applicable only for Bankruptcy Court type."
                 case_discharged_start_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged start date on or after the given date.\n\n\tNote: Applicable only for Bankruptcy Court type."
+                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20 \n\n\tNote: Applicable only for Bankruptcy Court type."
                 case_discharged_end_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged end date on or before the given date.\n\n\tNote: Applicable only for Bankruptcy Court type."
+                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20 \n\n\tNote: Applicable only for Bankruptcy Court type."
               required:
                 - webhook_url
                 - unicourt_account_id
@@ -1340,35 +1340,35 @@ paths:
                 case_filed_start_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date."
+                  description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
                 case_filed_end_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date."
+                  description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
                 case_terminated_start_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date."
+                  description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
                 case_terminated_end_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search by limiting the cases which matches the criteria for case terminated end date on or before the given date."
+                  description: "Narrowing the search by limiting the cases which matches the criteria for case terminated end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
                 case_dismissed_start_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed start date on or after the given date.\n\n\tNote: Applicable only for Bankruptcy Court type."
+                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20 \n\n\tNote: Applicable only for Bankruptcy Court type."
                 case_dismissed_end_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed end date on or before the given date.\n\n\tNote: Applicable only for Bankruptcy Court type."
+                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20 \n\n\tNote: Applicable only for Bankruptcy Court type."
                 case_discharged_start_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged start date on or after the given date.\n\n\tNote: Applicable only for Bankruptcy Court type."
+                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20 \n\n\tNote: Applicable only for Bankruptcy Court type."
                 case_discharged_end_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged end date on or before the given date.\n\n\tNote: Applicable only for Bankruptcy Court type."
+                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20 \n\n\tNote: Applicable only for Bankruptcy Court type."
               required:
                 - webhook_url
                 - unicourt_account_id
@@ -1583,35 +1583,35 @@ paths:
                 case_filed_start_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date."
+                  description: "Narrowing the search by limiting the cases which matches the criteria for case filed start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
                 case_filed_end_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date."
+                  description: "Narrowing the search by limiting the cases which matches the criteria for case filed end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
                 case_terminated_start_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date."
+                  description: "Narrowing the search by limiting the cases which matches the criteria for case terminated start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
                 case_terminated_end_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search by limiting the cases which matches the criteria for case terminated end date on or before the given date."
+                  description: "Narrowing the search by limiting the cases which matches the criteria for case terminated end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20"
                 case_dismissed_start_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed start date on or after the given date.\n\n\tNote: This parameter is applicable since we only perform this search for Bankruptcy Court type."
+                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20 \n\n\tNote: This parameter is applicable since we only perform this search for Bankruptcy Court type."
                 case_dismissed_end_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed end date on or before the given date.\n\n\tNote: This parameter is applicable since we only perform this search for Bankruptcy Court type."
+                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case dismissed end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20 \n\n\tNote: This parameter is applicable since we only perform this search for Bankruptcy Court type."
                 case_discharged_start_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged start date on or after the given date.\n\n\tNote: This parameter is applicable since we only perform this search for Bankruptcy Court type."
+                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged start date on or after the given date. Format: YYYY-MM-DD, Ex: 2017-12-20 \n\n\tNote: This parameter is applicable since we only perform this search for Bankruptcy Court type."
                 case_discharged_end_date:
                   type: "string"
                   format: date
-                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged end date on or before the given date.\n\n\tNote: This parameter is applicable since we only perform this search for Bankruptcy Court type."
+                  description: "Narrowing the search for bankruptcy cases by limiting the cases which matches the criteria for case discharged end date on or before the given date. Format: YYYY-MM-DD, Ex: 2017-12-20 \n\n\tNote: This parameter is applicable since we only perform this search for Bankruptcy Court type."
               required:
                 - webhook_url
                 - unicourt_account_id
