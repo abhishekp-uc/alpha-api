@@ -2858,10 +2858,10 @@ components:
                   case_status: "PENDING"
                   courthouse: "PAWBKE"
                 pages:
-                  CASE_QUERY: { }
-                  CASE_SUMMARY: { }
-                  DOCKET_REPORT: { }
-                  ASSOCIATED_CASES: { }
+                  CASE_QUERY: null
+                  CASE_SUMMARY: null
+                  DOCKET_REPORT: null
+                  ASSOCIATED_CASES: null
                   PACER_CASE_LOCATOR_RESULTS:
                     first_fetch: '2019-05-08 10:17:56'
                     last_fetch: '2020-04-25 10:42:46'
