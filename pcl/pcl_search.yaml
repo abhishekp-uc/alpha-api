@@ -1881,7 +1881,6 @@ components:
             - results_found
             - results
             - link
-            - total_pages
             - more_results
           properties:
             job_id:
