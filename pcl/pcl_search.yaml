@@ -8,7 +8,7 @@ info:
 servers:
   - url: 'https://staging-api-pcl.unicourt.com/pcl-api-v1-0'
 paths:
-  /pacer/search/appeal-courts/:
+  /pacer/search/appeal-courts:
     get:
       tags:
         - Get PACER Search API's
@@ -167,7 +167,7 @@ paths:
                   $ref: "#/components/examples/FailureInternalServerError"
 
 
-  /pacer/search/bankruptcy-courts/:
+  /pacer/search/bankruptcy-courts:
     get:
       tags:
         - Get PACER Search API's
@@ -379,7 +379,7 @@ paths:
                 Internal Server Error:
                   $ref: "#/components/examples/FailureInternalServerError"
 
-  /pacer/search/civil-courts/:
+  /pacer/search/civil-courts:
     get:
       tags:
         - Get PACER Search API's
@@ -543,7 +543,7 @@ paths:
                 Internal Server Error:
                   $ref: "#/components/examples/FailureInternalServerError"
 
-  /pacer/search/criminal-courts/:
+  /pacer/search/criminal-courts:
     get:
       tags:
         - Get PACER Search API's
@@ -700,7 +700,7 @@ paths:
                 Internal Server Error:
                   $ref: "#/components/examples/FailureInternalServerError"
 
-  /pacer/search/multidistrict-courts/:
+  /pacer/search/multidistrict-courts:
     get:
       tags:
         - Get PACER Search API's
@@ -832,7 +832,7 @@ paths:
                 Internal Server Error:
                   $ref: "#/components/examples/FailureInternalServerError"
 
-  /pacer/search/all-courts/:
+  /pacer/search/all-courts:
     get:
       tags:
         - Get PACER Search API's
@@ -1007,7 +1007,7 @@ paths:
                   $ref: "#/components/examples/FailureInternalServerError"
 
 
-  /pacer/search/case/:
+  /pacer/search/case:
     post:
       tags:
         - PACER Search With Specific Search Type (Bulk Data Download)
@@ -1238,7 +1238,7 @@ paths:
                         PACER Search CallBack Response:
                           $ref: "#/components/examples/SuccessPclWebhookResponse"
 
-  /pacer/search/party/:
+  /pacer/search/party:
     post:
       tags:
         - PACER Search With Specific Search Type (Bulk Data Download)
@@ -1495,7 +1495,7 @@ paths:
                         CallBack Success Response:
                           $ref: "#/components/examples/SuccessPclWebhookResponse"
 
-  /pacer/search/bk-ssn-ein/:
+  /pacer/search/bk-ssn-ein:
     post:
       tags:
         - PACER Search With Specific Search Type (Bulk Data Download)
@@ -1742,7 +1742,7 @@ paths:
                           $ref: "#/components/examples/SuccessPclWebhookResponse"
 
 
-  /pacer/get-search-results/{job_id}/:
+  /pacer/get-search-results/{job_id}:
     get:
       tags:
         - Get Search Results
@@ -1872,6 +1872,17 @@ components:
       properties:
         pcl:
           type: "object"
+          required:
+            - job_id
+            - pacer_cost
+            - pacer_search_type
+            - page_number
+            - results_extracted
+            - results_found
+            - results
+            - link
+            - total_pages
+            - more_results
           properties:
             job_id:
               description: "Unique Job Id which was given as a response to any of the PACER Search API's."
@@ -1897,13 +1908,15 @@ components:
               description: "Number of results PCL reported to match the search criteria."
               type: "integer"
               example: 5208
-            PACER_CASE_LOCATOR_DATA:
+            results:
               type: "array"
+              nullable: true
               description: "Array of all the case details that is extracted"
               items:
                 $ref: "#/components/schemas/PacerCaseLocatorData"
             more_results:
               type: "object"
+              nullable: true
               required:
                 - link
                 - total_pages
@@ -1919,159 +1932,261 @@ components:
 
     PacerCaseLocatorData:
       type: "object"
+      required:
+        - case_id
+        - pcl_data
+      properties:
+        case_id:
+          type: "string"
+          description: "This parameter represents the unicourt case id of the case"
+          example: "FFCBQHBOH4YESFISHNJWHCK4LZFQY0901"
+        pcl_data:
+          $ref: "#/components/schemas/CaseSourcePageData"
+
+
+    CaseSourcePageData:
+      type: "object"
+      required:
+        - bankruptcyChapter
+        - caseId
+        - caseNumber
+        - caseOffice
+        - caseTitle
+        - caseType
+        - caseYear
+        - civilCtoNumber
+        - civilDateDisposition
+        - civilDateInitiated
+        - civilDateTerminated
+        - civilStatDisposition
+        - civilStatInitiated
+        - civilStatTerminated
+        - civilTransferee
+        - courtId
+        - dateDischarged
+        - dateDismissed
+        - dateFiled
+        - dateReopened
+        - dateTermed
+        - dispositionMethod
+        - jointBankruptcyFlag
+        - jointDischargedDate
+        - jointDismissedDate
+        - jointDispositionMethod
+        - jpmlNumber
+        - mdlCourtId
+        - mdlDateOrdered
+        - mdlDateReceived
+        - mdlExtension
+        - mdlJudgeLastName
+        - mdlStatus
+        - mdlTransferee
+        - mdlTransfereeDistrict
+        - natureOfSuit
+        - caseNumberFull
+        - caseLink
+        - firstName
+        - generation
+        - lastName
+        - middleName
+        - partyRole
+        - partyType
+        - disposition
       properties:
         bankruptcyChapter:
           type: "string"
+          nullable: true
           description: "This parameter represents the bankruptcy chapter of the case when it is present"
         caseId:
           type: "string"
+          nullable: true
           description: "This parameter represents the case id of the case when it is present"
           example: "65866"
         caseNumber:
           type: "string"
+          nullable: true
           description: "This parameter represents the case number of the case when it is present"
           example: "1"
         caseOffice:
           type: "string"
+          nullable: true
           description: "This parameter represents the case office of the case when it is present"
           example: "4"
         caseTitle:
           type: "string"
+          nullable: true
           description: "This parameter represents the case title of the case when it is present"
           example: "Flenaugh v. Fairbanks Correctional Center"
         caseType:
           type: "string"
+          nullable: true
           description: "This parameter represents the case type of the case when it is present"
           example: "cv"
         caseYear:
           type: "string"
+          nullable: true
           description: "This parameter represents the case year of the case when it is present"
           example: "2021"
         civilCtoNumber:
           type: "string"
+          nullable: true
           description: "This parameter represents the civil cto number of the case when it is present"
         civilDateDisposition:
           type: "string"
+          nullable: true
           description: "This parameter represents the civil disposition date of the case when it is present"
         civilDateInitiated:
           type: "string"
+          nullable: true
           description: "This parameter represents the civil initiated date of the case when it is present"
         civilDateTerminated:
           type: "string"
+          nullable: true
           description: "This parameter represents the civil terminated date of the case when it is present"
         civilStatDisposition:
           type: "string"
+          nullable: true
           description: "This parameter represents the civil stat disposition of the case when it is present"
         civilStatInitiated:
           type: "string"
+          nullable: true
           description: "This parameter represents the civil stat initiated of the case when it is present"
         civilStatTerminated:
           type: "string"
+          nullable: true
           description: "This parameter represents the civil stat terminated of the case when it is present"
         civilTransferee:
           type: "string"
+          nullable: true
           description: "This parameter represents the civil transferee of the case when it is present"
         courtId:
           type: "string"
+          nullable: true
           description: "This parameter represents the court id of the case when it is present"
           example: "akdc"
         dateDischarged:
           type: "string"
+          nullable: true
           description: "This parameter represents the date discharged of the case when it is present"
         dateDismissed:
           type: "string"
+          nullable: true
           description: "This parameter represents the date dismissed of the case when it is present"
         dateFiled:
           type: "string"
+          nullable: true
           description: "This parameter represents the date filed of the case when it is present"
           example: "06-01-2021"
         dateReopened:
           type: "string"
+          nullable: true
           description: "This parameter represents the date reopened of the case when it is present"
         dateTermed:
           type: "string"
+          nullable: true
           description: "This parameter represents the date termed of the case when it is present"
         dispositionMethod:
           type: "string"
+          nullable: true
           description: "This parameter represents the disposition method of the case when it is present"
         jointBankruptcyFlag:
           type: "string"
+          nullable: true
           description: "This parameter represents the joint bankruptcy flag of the case when it is present"
         jointDischargedDate:
           type: "string"
+          nullable: true
           description: "This parameter represents the joint discharged date of the case when it is present"
         jointDismissedDate:
           type: "string"
+          nullable: true
           description: "This parameter represents the joint dismissed date of the case when it is present"
         jointDispositionMethod:
           type: "string"
+          nullable: true
           description: "This parameter represents the joint disposition method of the case when it is present"
         jpmlNumber:
           type: "string"
+          nullable: true
           description: "This parameter represents the jpml number of the case when it is present"
         mdlCourtId:
           type: "string"
+          nullable: true
           description: "This parameter represents the mdl court id of the case when it is present"
         mdlDateOrdered:
           type: "string"
+          nullable: true
           description: "This parameter represents the mdl date ordered of the case when it is present"
         mdlDateReceived:
           type: "string"
+          nullable: true
           description: "This parameter represents the mdl date received of the case when it is present"
         mdlExtension:
           type: "string"
+          nullable: true
           description: "This parameter represents the mdl extension of the case when it is present"
         mdlJudgeLastName:
           type: "string"
+          nullable: true
           description: "This parameter represents the mdl judge lastname of the case when it is present"
         mdlLittype:
           type: "string"
+          nullable: true
           description: "This parameter represents the mdl lit type of the case when it is present"
         mdlStatus:
           type: "string"
+          nullable: true
           description: "This parameter represents the mdl status of the case when it is present"
         mdlTransferee:
           type: "string"
+          nullable: true
           description: "This parameter represents the mdl transferee of the case when it is present"
         mdlTransfereeDistrict:
           type: "string"
+          nullable: true
           description: "This parameter represents the mdl transferee district of the case when it is present"
         natureOfSuit:
           type: "string"
+          nullable: true
           description: "This parameter represents the nature of suit of the case when it is present"
           example: "360"
         caseNumberFull:
           type: "string"
+          nullable: true
           description: "This parameter represents the casenumber full of the case when it is present"
           example: "4:2021cv00001"
         caseLink:
           type: "string"
+          nullable: true
           description: "This parameter represents the case link of the case when it is present"
           example: "https://ecf.akd.uscourts.gov/cgi-bin/iqquerymenu.pl?65866"
-        unicourtCaseId:
-          type: "string"
-          description: "This parameter represents the unicourt case id of the case when it is present"
-          example: "FFCBQHBOH4YESFISHNJWHCK4LZFQY0901"
         firstName:
           type: "string"
+          nullable: true
           description: "This parameter represents the first name of the case when it is present"
         generation:
           type: "string"
+          nullable: true
           description: "This parameter represents the generation of the case when it is present"
         lastName:
           type: "string"
+          nullable: true
           description: "This parameter represents the last name of the case when it is present"
         middleName:
           type: "string"
+          nullable: true
           description: "This parameter represents the middle name of the case when it is present"
         partyRole:
           type: "string"
+          nullable: true
           description: "This parameter represents the party role of the case when it is present"
         partyType:
           type: "string"
+          nullable: true
           description: "This parameter represents the party type of the case when it is present"
         disposition:
           type: "string"
+          nullable: true
           description: "This parameter represents the disposition of the case when it is present"
 
     Error:
@@ -2860,7 +2975,7 @@ components:
               disposition: null
           more_results:
             link: "https://staging-api-pcl.unicourt.com/pcl-api-v1-0/rest/v2/pacer/get-search-results/PCLJL6AU62LEKJNVDAQ6J5PGPC3HNRLRE1383/?page_number=2"
-            total_pages: 1
+            total_pages: 94
 
     FailureInternalServerError:
       value:
