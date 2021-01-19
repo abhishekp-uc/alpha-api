@@ -2916,7 +2916,6 @@ components:
               natureOfSuit: "550"
               caseNumberFull: "3:2021cv00004"
               caseLink: "https://ecf.akd.uscourts.gov/cgi-bin/iqquerymenu.pl?65870"
-              unicourtCaseId: "FFCBQHBOH4YESFISHNJWHCK4LZFQY0901"
               firstName: null
               generation: null
               lastName: null
@@ -2963,7 +2962,6 @@ components:
               natureOfSuit: "791"
               caseNumberFull: ":2021cv00021"
               caseLink: "http://ecf.alnd.uscourts.gov//cgi-bin/iqquerymenu.pl?176045"
-              unicourtCaseId: "FFCBQHBOH4YESFISHNJWHCK4LZFQY0901"
               firstName: null
               generation: null
               lastName: null
