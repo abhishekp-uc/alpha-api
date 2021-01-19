@@ -1942,7 +1942,6 @@ components:
         pcl_data:
           $ref: "#/components/schemas/CaseSourcePageData"
 
-
     CaseSourcePageData:
       type: "object"
       required:
