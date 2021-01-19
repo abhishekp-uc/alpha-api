@@ -1913,14 +1913,12 @@ components:
                 $ref: "#/components/schemas/PacerCaseLocatorData"
             more_results:
               type: "object"
-              nullable: true
               required:
                 - link
                 - total_pages
               properties:
                 link:
                   type: "string"
-                  nullable: true
                   description: "This is the URL to hit to fetch the next page details if it exists"
                   example: "https://staging-api-pcl.unicourt.com/pcl-api-v1-0/rest/v2/pacer/get-search-results/PCLJL6AU62LEKJNVDAQ6J5PGPC3HNRLRE1383/?page_number=2"
                 total_pages:
