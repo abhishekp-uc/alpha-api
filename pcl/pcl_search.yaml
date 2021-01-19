@@ -1897,254 +1897,182 @@ components:
               description: "Number of results PCL reported to match the search criteria."
               type: "integer"
               example: 5208
-            results:
+            PACER_CASE_LOCATOR_DATA:
               type: "array"
               description: "Array of all the case details that is extracted"
               items:
-                $ref: "#/components/schemas/CaseMeta"
-
-    CaseMeta:
-      type: "object"
-      required:
-        - case_number
-        - case_name
-        - filing_date
-        - last_updated_date
-        - last_update_changes_found
-        - participants_last_fetch
-        - case_type
-        - case_type_subcategory
-        - case_type_category
-        - case_status
-        - case_status_category
-        - courthouse
-        - jurisdiction
-        - county
-        - state
-        - case_id
-        - source_data
-      properties:
-        case_number:
-          description: "Case number as provided by Court."
-          type: "string"
-          maxLength: 50
-          example: '2:19-BK-20033'
-        case_name:
-          description: "Case name as provided by Court."
-          type: "string"
-          maxLength: 250
-          example: Mark C. Bonomi and Nicole A. Bonomi
-        filing_date:
-          description: "'Filing date for the case provided by the Court. Formatted as YYYY-MM-DD HH:MM:SS'"
-          type: "string"
-          format: date time
-          pattern: '^(\d{4})-(\d?\d)-(\d?\d) (?:(2[0-3]|[01]?[0-9])):([0-5]?[0-9]):([0-5]?[0-9])$'
-          example: '2019-01-04 00:00:00'
-        last_updated_date:
-          description: "'The date and time when the case was last updated from the Court. This date and time is in UTC. Formatted as YYYY-MM-DD HH:MM:SS Note: It is not necessary that every time the case is fetched from Court we find changes in the case information. It could be that we already have the latest information from the Court and no changes exist.'"
-          type: "string"
-          format: date time
-          pattern: '^(\d{4})-(\d?\d)-(\d?\d) (?:(2[0-3]|[01]?[0-9])):([0-5]?[0-9]):([0-5]?[0-9])$'
-          example: '2020-05-08 10:17:56'
-        last_update_changes_found:
-          description: "'The date and time when the case was last fetched from the Court where we found changes in the case information. This date and time is in UTC. Formatted as YYYY-MM-DD HH:MM:SS'"
-          type: "string"
-          format: date time
-          pattern: '^(\d{4})-(\d?\d)-(\d?\d) (?:(2[0-3]|[01]?[0-9])):([0-5]?[0-9]):([0-5]?[0-9])$'
-          example: '2020-04-25 10:42:46'
-        participants_last_fetch:
-          description: "'The date and time when parties/attorneys were last updated from the Court. Formatted as YYYY-MM-DD HH:MM:SS Note: This is currently applicable for Federal PACER cases since we have an option to exclude parties and fetch only latest docket entries when updating cases to save PACER fees.'"
-          type: "string"
-          format: date time
-          pattern: '^(\d{4})-(\d?\d)-(\d?\d) (?:(2[0-3]|[01]?[0-9])):([0-5]?[0-9]):([0-5]?[0-9])$'
-          example: '2020-04-25 10:42:46'
-        case_type:
-          description: "UniCourt's standardized Case Type. Full list is available in Case Type Filter API."
-          type: "string"
-          maxLength: 100
-          example: Chapter 13
-        case_type_subcategory:
-          description: "UniCourt's standardized Case Type Sub-category. Full list is available in Case Type Filter API."
-          type: "string"
-          maxLength: 100
-          example: Bankruptcy
-        case_type_category:
-          type: "string"
-          description: "UniCourt's standardized Case Type Category. Full list is available in Case Type Filter API."
-          maxLength: 100
-          example: Civil
-        case_status:
-          description: "UniCourt's standardized Case Status. Full list is available in Case Status Filter API."
-          type: "string"
-          maxLength: 250
-          example: Other Pending
-        case_status_category:
-          type: "string"
-          description: "UniCourt's standardized Case Status Category. Full list is available in Case Status Filter API."
-          maxLength: 100
-          example: Pending
-        courthouse:
-          description: "UniCourt's standardized Courthouse name. Full list is available in Jurisdiction Filter API."
-          type: "string"
-          maxLength: 100
-          example: Pennsylvania Western Bankruptcy
-        jurisdiction:
-          description: "UniCourt's standardized Court System. Full list is available in Jurisdiction Filter API."
-          maxLength: 100
-          type: "string"
-          example: U.S. Bankruptcy Courts
-        county:
-          description: "The county that the court system belongs to. This is only applicable for State Court Systems. In case of Federal Court Systems this will be null."
-          maxLength: 100
-          type: "string"
-          nullable: true
-          example: null
-        state:
-          type: "string"
-          maxLength: 2
-          enum:
-            - AL
-            - AK
-            - AZ
-            - AR
-            - CA
-            - CO
-            - CT
-            - DE
-            - FL
-            - GA
-            - HI
-            - ID
-            - IL
-            - IN
-            - IA
-            - KS
-            - KY
-            - LA
-            - ME
-            - MD
-            - MA
-            - MI
-            - MN
-            - MS
-            - MO
-            - MT
-            - NE
-            - NV
-            - NH
-            - NJ
-            - NM
-            - NY
-            - NC
-            - ND
-            - OH
-            - OK
-            - OR
-            - PA
-            - RI
-            - SC
-            - SD
-            - TN
-            - TX
-            - UT
-            - VT
-            - VA
-            - WA
-            - DC
-            - WV
-            - WI
-            - WY
-            - PR
-            - MP
-            - GU
-        case_id:
-          description: "Uniquely identifies this case in UniCourt."
-          type: "string"
-          maxLength: 33
-          example: FFCBQHBOH4YESFISHNJWHCK4LZFQY0901
-        source_data:
-          type: "object"
-          required:
-            - common
-            - pages
-          properties:
-            common:
-              description: "Source data which is common across all the courts."
+                $ref: "#/components/schemas/PacerCaseLocatorData"
+            more_results:
               type: "object"
               required:
-                - case_type
-                - case_status
-                - courthouse
+                - link
+                - total_pages
               properties:
-                case_type:
-                  description: "Source Case Type"
+                link:
+                  description: "This is the URL to hit to fetch the next page details if it exists"
                   type: "string"
-                  example: CHAPTER 13
-                case_status:
-                  description: "Source Case Status"
-                  type: "string"
-                  example: PENDING
-                courthouse:
-                  description: "Source courthouse"
-                  type: "string"
-                  example: PAWBKE
-            pages:
-              description: "Source data from different pages in the court website."
-              oneOf:
-                - $ref: '#/components/schemas/CaseSourcePageData'
-                - type: "string"
-                  example: null
-                  nullable: true
+                  example: "https://staging-api-pcl.unicourt.com/pcl-api-v1-0/rest/v2/pacer/get-search-results/PCLJL6AU62LEKJNVDAQ6J5PGPC3HNRLRE1383/?page_number=2"
+                total_pages:
+                  description: "Total Number of pages that we can extract results for the respective search parameters"
+                  type: "integer"
+                  example: 97
 
-    CaseSourcePageData:
+    PacerCaseLocatorData:
       type: "object"
       properties:
-        source_page_name:
-          description: "'Pages supported for PACER CASE_QUERY, DOCKET_REPORT, CASE_SUMMARY, ASSOCIATED_CASES, PACER_CASE_LOCATOR_RESULTS.'"
-          required:
-            - first_fetch
-            - last_fetch
-            - raw_ordered_data
-            - extracted_fields
-          properties:
-            first_fetch:
-              description: "When was the page first fetched from the court site."
-              type: "string"
-              example: '2020-05-08 10:17:55'
-            last_fetch:
-              description: "When was the page last fetched from the court site."
-              type: "string"
-              example: '2020-05-08 10:17:55'
-            raw_ordered_data:
-              description: "Data in this array is ordered as it appears in source."
-              type: "array"
-              items:
-                type: "object"
-                properties:
-                  order:
-                    description: "Sort order as it appears in the source."
-                    type: "integer"
-                    example: 0
-                  source_field_name:
-                    description: "Label and its value as it appears in the source."
-                    type: "string"
-                    nullable: true
-                    example: '"Office": "Pittsburgh"'
-              example:
-                - order: 0
-                  Office: Pittsburgh
-                  Filed: 01/04/2019
-                - order: 1
-                  County: ALLEGHENY-PA
-                  Terminated: null
-            extracted_fields:
-              description: "Data in this field is extracted from raw_ordered_data for easy access."
-              oneOf:
-                - type: "object"
-                  description: "Label and its value which has been extracted from raw_ordered_data."
-                - type: "string"
-                  example: null
-                  nullable: true
+        bankruptcyChapter:
+          type: "string"
+          description: "This parameter represents the bankruptcy chapter of the case when it is present"
+        caseId:
+          type: "string"
+          description: "This parameter represents the case id of the case when it is present"
+          example: "65866"
+        caseNumber:
+          type: "string"
+          description: "This parameter represents the case number of the case when it is present"
+          example: "1"
+        caseOffice:
+          type: "string"
+          description: "This parameter represents the case office of the case when it is present"
+          example: "4"
+        caseTitle:
+          type: "string"
+          description: "This parameter represents the case title of the case when it is present"
+          example: "Flenaugh v. Fairbanks Correctional Center"
+        caseType:
+          type: "string"
+          description: "This parameter represents the case type of the case when it is present"
+          example: "cv"
+        caseYear:
+          type: "string"
+          description: "This parameter represents the case year of the case when it is present"
+          example: "2021"
+        civilCtoNumber:
+          type: "string"
+          description: "This parameter represents the civil cto number of the case when it is present"
+        civilDateDisposition:
+          type: "string"
+          description: "This parameter represents the civil disposition date of the case when it is present"
+        civilDateInitiated:
+          type: "string"
+          description: "This parameter represents the civil initiated date of the case when it is present"
+        civilDateTerminated:
+          type: "string"
+          description: "This parameter represents the civil terminated date of the case when it is present"
+        civilStatDisposition:
+          type: "string"
+          description: "This parameter represents the civil stat disposition of the case when it is present"
+        civilStatInitiated:
+          type: "string"
+          description: "This parameter represents the civil stat initiated of the case when it is present"
+        civilStatTerminated:
+          type: "string"
+          description: "This parameter represents the civil stat terminated of the case when it is present"
+        civilTransferee:
+          type: "string"
+          description: "This parameter represents the civil transferee of the case when it is present"
+        courtId:
+          type: "string"
+          description: "This parameter represents the court id of the case when it is present"
+          example: "akdc"
+        dateDischarged:
+          type: "string"
+          description: "This parameter represents the date discharged of the case when it is present"
+        dateDismissed:
+          type: "string"
+          description: "This parameter represents the date dismissed of the case when it is present"
+        dateFiled:
+          type: "string"
+          description: "This parameter represents the date filed of the case when it is present"
+          example: "06-01-2021"
+        dateReopened:
+          type: "string"
+          description: "This parameter represents the date reopened of the case when it is present"
+        dateTermed:
+          type: "string"
+          description: "This parameter represents the date termed of the case when it is present"
+        dispositionMethod:
+          type: "string"
+          description: "This parameter represents the disposition method of the case when it is present"
+        jointBankruptcyFlag:
+          type: "string"
+          description: "This parameter represents the joint bankruptcy flag of the case when it is present"
+        jointDischargedDate:
+          type: "string"
+          description: "This parameter represents the joint discharged date of the case when it is present"
+        jointDismissedDate:
+          type: "string"
+          description: "This parameter represents the joint dismissed date of the case when it is present"
+        jointDispositionMethod:
+          type: "string"
+          description: "This parameter represents the joint disposition method of the case when it is present"
+        jpmlNumber:
+          type: "string"
+          description: "This parameter represents the jpml number of the case when it is present"
+        mdlCourtId:
+          type: "string"
+          description: "This parameter represents the mdl court id of the case when it is present"
+        mdlDateOrdered:
+          type: "string"
+          description: "This parameter represents the mdl date ordered of the case when it is present"
+        mdlDateReceived:
+          type: "string"
+          description: "This parameter represents the mdl date received of the case when it is present"
+        mdlExtension:
+          type: "string"
+          description: "This parameter represents the mdl extension of the case when it is present"
+        mdlJudgeLastName:
+          type: "string"
+          description: "This parameter represents the mdl judge lastname of the case when it is present"
+        mdlLittype:
+          type: "string"
+          description: "This parameter represents the mdl lit type of the case when it is present"
+        mdlStatus:
+          type: "string"
+          description: "This parameter represents the mdl status of the case when it is present"
+        mdlTransferee:
+          type: "string"
+          description: "This parameter represents the mdl transferee of the case when it is present"
+        mdlTransfereeDistrict:
+          type: "string"
+          description: "This parameter represents the mdl transferee district of the case when it is present"
+        natureOfSuit:
+          type: "string"
+          description: "This parameter represents the nature of suit of the case when it is present"
+          example: "360"
+        caseNumberFull:
+          type: "string"
+          description: "This parameter represents the casenumber full of the case when it is present"
+          example: "4:2021cv00001"
+        caseLink:
+          type: "string"
+          description: "This parameter represents the case link of the case when it is present"
+          example: "https://ecf.akd.uscourts.gov/cgi-bin/iqquerymenu.pl?65866"
+        unicourtCaseId:
+          type: "string"
+          description: "This parameter represents the unicourt case id of the case when it is present"
+          example: "FFCBQHBOH4YESFISHNJWHCK4LZFQY0901"
+        firstName:
+          type: "string"
+          description: "This parameter represents the first name of the case when it is present"
+        generation:
+          type: "string"
+          description: "This parameter represents the generation of the case when it is present"
+        lastName:
+          type: "string"
+          description: "This parameter represents the last name of the case when it is present"
+        middleName:
+          type: "string"
+          description: "This parameter represents the middle name of the case when it is present"
+        partyRole:
+          type: "string"
+          description: "This parameter represents the party role of the case when it is present"
+        partyType:
+          type: "string"
+          description: "This parameter represents the party type of the case when it is present"
+        disposition:
+          type: "string"
+          description: "This parameter represents the disposition of the case when it is present"
 
     Error:
       type: "object"
@@ -2835,50 +2763,104 @@ components:
           results_extracted: 54
           pacer_cost: "$0.10"
           page_number: 1
-          results:
-            - case_number: "2:19-BK-20033"
-              case_name: "Mark C. Bonomi and Nicole A. Bonomi"
-              filing_date: "2019-01-04 00:00:00"
-              last_updated_date: "2020-05-08 10:17:56"
-              last_update_changes_found: "2020-04-25 10:42:46"
-              participants_last_fetch: "2020-04-25 10:42:46"
-              case_type: "Chapter 13"
-              case_type_subcategory: "Bankruptcy"
-              case_type_category: "Civil"
-              case_status: "Other Pending"
-              case_status_category: "Pending"
-              courthouse: "Pennsylvania Western Bankruptcy"
-              jurisdiction: "U.S. Bankruptcy Courts"
-              county: null
-              state: "PA"
-              case_id: "FFCBQHBOH4YESFISHNJWHCK4LZFQY0901"
-              source_data:
-                common:
-                  case_type: "CHAPTER 13"
-                  case_status: "PENDING"
-                  courthouse: "PAWBKE"
-                pages:
-                  CASE_QUERY: null
-                  CASE_SUMMARY: null
-                  DOCKET_REPORT: null
-                  ASSOCIATED_CASES: null
-                  PACER_CASE_LOCATOR_RESULTS:
-                    first_fetch: '2019-05-08 10:17:56'
-                    last_fetch: '2020-04-25 10:42:46'
-                    extracted_fields:
-                      vol: 'v'
-                      asset: 'Yes'
-                      judge: 'Gregory L. Taddonio'
-                      chapter: '13'
-                      case_type: 'bk'
-                      date_filed: '01/04/2019'
-                      pacer_case_id: 359031
-                      plan_confirmed: '07/16/2019'
-                      date_of_last_filing: '03/25/2020'
-                    raw_ordered_data: [ ]
+          PACER_CASE_LOCATOR_DATA:
+            - bankruptcyChapter: null
+              caseId: "65870"
+              caseNumber: "4"
+              caseOffice: "3"
+              caseTitle: "Redfox v. Doe et al"
+              caseType: "cv"
+              caseYear: "2021"
+              civilCtoNumber: null
+              civilDateDisposition: null
+              civilDateInitiated: null
+              civilDateTerminated: null
+              civilStatDisposition: null
+              civilStatInitiated: null
+              civilStatTerminated: null
+              civilTransferee: null
+              courtId: "akdc"
+              dateDischarged: null
+              dateDismissed: null
+              dateFiled: "06-01-2021"
+              dateReopened: null
+              dateTermed: null
+              dispositionMethod: null
+              jointBankruptcyFlag: null
+              jointDischargedDate: null
+              jointDismissedDate: null
+              jointDispositionMethod: null
+              jpmlNumber: null
+              mdlCourtId: null
+              mdlDateOrdered: null
+              mdlDateReceived: null
+              mdlExtension: null
+              mdlJudgeLastName: null
+              mdlLittype: null
+              mdlStatus: null
+              mdlTransferee: null
+              mdlTransfereeDistrict: null
+              natureOfSuit: "550"
+              caseNumberFull: "3:2021cv00004"
+              caseLink: "https://ecf.akd.uscourts.gov/cgi-bin/iqquerymenu.pl?65870"
+              unicourtCaseId: "FFCBQHBOH4YESFISHNJWHCK4LZFQY0901"
+              firstName: null
+              generation: null
+              lastName: null
+              middleName: null
+              partyRole: null
+              partyType: null
+              disposition: null
+            - bankruptcyChapter: null
+              caseId: "176045"
+              caseNumber: "21"
+              caseOffice: "4"
+              caseTitle: "Chamblee Jr v. Unum Group Corporation et al"
+              caseType: "cv"
+              caseYear: "2021"
+              civilCtoNumber: null
+              civilDateDisposition: null
+              civilDateInitiated: null
+              civilDateTerminated: null
+              civilStatDisposition: null
+              civilStatInitiated: null
+              civilStatTerminated: null
+              civilTransferee: null
+              courtId: "alndc"
+              dateDischarged: null
+              dateDismissed: null
+              dateFiled: "06-01-2021"
+              dateReopened: null
+              dateTermed: null
+              dispositionMethod: null
+              jointBankruptcyFlag: null
+              jointDischargedDate: null
+              jointDismissedDate: null
+              jointDispositionMethod: null
+              jpmlNumber: null
+              mdlCourtId: null
+              mdlDateOrdered: null
+              mdlDateReceived: null
+              mdlExtension: null
+              mdlJudgeLastName: null
+              mdlLittype: null
+              mdlStatus: null
+              mdlTransferee: null
+              mdlTransfereeDistrict: null
+              natureOfSuit: "791"
+              caseNumberFull: ":2021cv00021"
+              caseLink: "http://ecf.alnd.uscourts.gov//cgi-bin/iqquerymenu.pl?176045"
+              unicourtCaseId: "FFCBQHBOH4YESFISHNJWHCK4LZFQY0901"
+              firstName: null
+              generation: null
+              lastName: null
+              middleName: null
+              partyRole: null
+              partyType: null
+              disposition: null
           more_results:
             link: "https://staging-api-pcl.unicourt.com/pcl-api-v1-0/rest/v2/pacer/get-search-results/PCLJL6AU62LEKJNVDAQ6J5PGPC3HNRLRE1383/?page_number=2"
-            total_pages: 97
+            total_pages: 1
 
     FailureInternalServerError:
       value:
