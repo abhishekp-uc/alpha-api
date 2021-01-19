@@ -8,7 +8,7 @@ info:
 servers:
   - url: 'https://staging-api-pcl.unicourt.com/pcl-api-v1-0'
 paths:
-  /pacer/search/appeal-courts:
+  /pacer/search/appeal-courts/:
     get:
       tags:
         - Get PACER Search API's
@@ -167,7 +167,7 @@ paths:
                   $ref: "#/components/examples/FailureInternalServerError"
 
 
-  /pacer/search/bankruptcy-courts:
+  /pacer/search/bankruptcy-courts/:
     get:
       tags:
         - Get PACER Search API's
@@ -379,7 +379,7 @@ paths:
                 Internal Server Error:
                   $ref: "#/components/examples/FailureInternalServerError"
 
-  /pacer/search/civil-courts:
+  /pacer/search/civil-courts/:
     get:
       tags:
         - Get PACER Search API's
@@ -543,7 +543,7 @@ paths:
                 Internal Server Error:
                   $ref: "#/components/examples/FailureInternalServerError"
 
-  /pacer/search/criminal-courts:
+  /pacer/search/criminal-courts/:
     get:
       tags:
         - Get PACER Search API's
@@ -700,7 +700,7 @@ paths:
                 Internal Server Error:
                   $ref: "#/components/examples/FailureInternalServerError"
 
-  /pacer/search/multidistrict-courts:
+  /pacer/search/multidistrict-courts/:
     get:
       tags:
         - Get PACER Search API's
@@ -832,7 +832,7 @@ paths:
                 Internal Server Error:
                   $ref: "#/components/examples/FailureInternalServerError"
 
-  /pacer/search/all-courts:
+  /pacer/search/all-courts/:
     get:
       tags:
         - Get PACER Search API's
@@ -1007,7 +1007,7 @@ paths:
                   $ref: "#/components/examples/FailureInternalServerError"
 
 
-  /pacer/search/case:
+  /pacer/search/case/:
     post:
       tags:
         - PACER Search With Specific Search Type (Bulk Data Download)
@@ -1238,7 +1238,7 @@ paths:
                         PACER Search CallBack Response:
                           $ref: "#/components/examples/SuccessPclWebhookResponse"
 
-  /pacer/search/party:
+  /pacer/search/party/:
     post:
       tags:
         - PACER Search With Specific Search Type (Bulk Data Download)
@@ -1495,7 +1495,7 @@ paths:
                         CallBack Success Response:
                           $ref: "#/components/examples/SuccessPclWebhookResponse"
 
-  /pacer/search/bk-ssn-ein:
+  /pacer/search/bk-ssn-ein/:
     post:
       tags:
         - PACER Search With Specific Search Type (Bulk Data Download)
@@ -1742,7 +1742,7 @@ paths:
                           $ref: "#/components/examples/SuccessPclWebhookResponse"
 
 
-  /pacer/get-search-results/{job_id}:
+  /pacer/get-search-results/{job_id}/:
     get:
       tags:
         - Get Search Results
@@ -1922,8 +1922,9 @@ components:
                 - total_pages
               properties:
                 link:
-                  description: "This is the URL to hit to fetch the next page details if it exists"
                   type: "string"
+                  nullable: true
+                  description: "This is the URL to hit to fetch the next page details if it exists"
                   example: "https://staging-api-pcl.unicourt.com/pcl-api-v1-0/rest/v2/pacer/get-search-results/PCLJL6AU62LEKJNVDAQ6J5PGPC3HNRLRE1383/?page_number=2"
                 total_pages:
                   description: "Total Number of pages that we can extract results for the respective search parameters"
@@ -1938,6 +1939,7 @@ components:
       properties:
         case_id:
           type: "string"
+          maxLength: 33
           description: "This parameter represents the unicourt case id of the case"
           example: "FFCBQHBOH4YESFISHNJWHCK4LZFQY0901"
         pcl_data:
