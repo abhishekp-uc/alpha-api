@@ -1880,7 +1880,6 @@ components:
             - results_extracted
             - results_found
             - results
-            - link
             - more_results
           properties:
             job_id:
@@ -1909,7 +1908,6 @@ components:
               example: 5208
             results:
               type: "array"
-              nullable: true
               description: "Array of all the case details that is extracted"
               items:
                 $ref: "#/components/schemas/PacerCaseLocatorData"
