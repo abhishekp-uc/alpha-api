@@ -166,7 +166,6 @@ paths:
                 Internal Server Error:
                   $ref: "#/components/examples/FailureInternalServerError"
 
-
   /pacer/search/bankruptcy-courts/:
     get:
       tags:
@@ -732,24 +731,6 @@ paths:
                   \n\n\tA search for case title Acme, Inc. will result in all case titles starting with Acme, Inc."
         - schema:
             type: "string"
-          in: "query"
-          name: party_name
-          description: "Party Name can be a name of the Person or an Entity name. Party Name can should be passed in either of the formats for appropriate results\n\n\t 1. Last Name or Entity Name\n\n\t 2. Last, First Name\n\n\t 3. Last, First Middle Name"
-        - schema:
-            type: "array"
-            items:
-              type: "string"
-          in: "query"
-          name: party_role
-          description: "Array of party codes with each party code separated by comma. Add the party codes in the array to narrow down your search further for the given party codes.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Party Codes.\n\n\tNOTE:\n\n\t* Party Codes can vary from court to court. Use party codes only if you know the exact party code used in the court regions which you will provide during requesting this API."
-        - schema:
-            type: "boolean"
-            default: False
-          in: "query"
-          name: party_exact_match
-          description: "Search will be made on the exact match of the party names. If the parameter is set to False then any parties whose name starts with the given party name will be fetched in the results."
-        - schema:
-            type: "string"
             format: date
           in: "query"
           name: case_filed_start_date
@@ -799,12 +780,6 @@ paths:
                   $ref: "#/components/examples/FailureCaseNumberFormatInvalid"
                 Invalid Case Title Value:
                   $ref: "#/components/examples/FailureCaseTitleValueInvalid"
-                Invalid Party Name Format:
-                  $ref: "#/components/examples/FailurePartyNameFormatInvalid"
-                Invalid Party Role Value:
-                  $ref: "#/components/examples/FailurePartyRoleValueInvalid"
-                Invalid Party Exact Match Value:
-                  $ref: "#/components/examples/FailurePartyExactMatchValueInvalid"
                 Invalid Case Filed Start Date Format:
                   $ref: "#/components/examples/FailureCaseFiledStartDateFormatInvalid"
                 Invalid Case Filed End Date Format:
