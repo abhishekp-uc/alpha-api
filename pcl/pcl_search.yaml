@@ -54,14 +54,14 @@ paths:
               type: "string"
           in: "query"
           name: court_regions
-          description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Court Region."
+          description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below for Court Region."
         - schema:
             type: "array"
             items:
               type: "string"
           in: "query"
           name: nature_of_suits
-          description: "Array of nature of suit with each nature of suit separated by comma. Add the nature of suit in the array to narrow down your search further for the given nature of suit.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Nature Of Suits.\n\n\tNote: Applicable only for Appellate and Civil Court types. Ex: If you wanted to apply '1110 - Insurance' in nature of suits for Appeal Courts then we would required only '1110' in the request"
+          description: "Array of nature of suit with each nature of suit separated by comma. Add the nature of suit in the array to narrow down your search further for the given nature of suit.\n\nPlease use the APPENDIX mentioned in the schema section below for Nature Of Suits.\n\n\tNote: Applicable only for Appellate and Civil Court types. Ex: If you wanted to apply '1110 - Insurance' in nature of suits for Appeal Courts then we would required only '1110' in the request"
         - schema:
             type: "string"
             format: date
@@ -215,7 +215,7 @@ paths:
               type: "string"
           in: "query"
           name: party_role
-          description: "Array of party codes with each party code separated by comma. Add the party codes in the array to narrow down your search further for the given party codes.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Party Codes.\n\n\tNOTE:\n\n\t* Party Codes can vary from court to court. Use party codes only if you know the exact party code used in the court regions which you will provide during requesting this API."
+          description: "Array of party codes with each party code separated by comma. Add the party codes in the array to narrow down your search further for the given party codes.\n\nPlease use the APPENDIX mentioned in the schema section below for Party Codes.\n\n\tNOTE:\n\n\t* Party Codes can vary from court to court. Use party codes only if you know the exact party code used in the court regions which you will provide during requesting this API."
         - schema:
             type: "boolean"
             default: False
@@ -238,14 +238,14 @@ paths:
               type: "string"
           in: "query"
           name: court_regions
-          description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Court Region."
+          description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below for Court Region."
         - schema:
             type: "array"
             items:
               type: "string"
           in: "query"
           name: chapters
-          description: "Array of bankruptcy chapters with each chapter separated by comma. Add bankruptcy chapters in the array to narrow down your search further for the given chapters.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Bankruptcy Chapters.\n\n\tNote: Applicable only for Bankruptcy Court type."
+          description: "Array of bankruptcy chapters with each chapter separated by comma. Add bankruptcy chapters in the array to narrow down your search further for the given chapters.\n\nPlease use the APPENDIX mentioned in the schema section below for Bankruptcy Chapters.\n\n\tNote: Applicable only for Bankruptcy Court type."
         - schema:
             type: "string"
             format: date
@@ -427,7 +427,7 @@ paths:
               type: "string"
           in: "query"
           name: party_role
-          description: "Array of party codes with each party code separated by comma. Add the party codes in the array to narrow down your search further for the given party codes.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Party Codes.\n\n\tNOTE:\n\n\t* Party Codes can vary from court to court. Use party codes only if you know the exact party code used in the court regions which you will provide during requesting this API."
+          description: "Array of party codes with each party code separated by comma. Add the party codes in the array to narrow down your search further for the given party codes.\n\nPlease use the APPENDIX mentioned in the schema section below for Party Codes.\n\n\tNOTE:\n\n\t* Party Codes can vary from court to court. Use party codes only if you know the exact party code used in the court regions which you will provide during requesting this API."
         - schema:
             type: "boolean"
             default: False
@@ -440,14 +440,14 @@ paths:
               type: "string"
           in: "query"
           name: court_regions
-          description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Court Region."
+          description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below for Court Region."
         - schema:
             type: "array"
             items:
               type: "string"
           in: "query"
           name: nature_of_suits
-          description: "Array of nature of suit with each nature of suit separated by comma. Add the nature of suit in the array to narrow down your search further for the given nature of suit.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Nature Of Suits.\n\n\tNote: Applicable only for Appellate and Civil Court types. Ex: If you wanted to apply '1110 - Insurance' in nature of suits for Appeal Courts then we would required only '1110' in the request"
+          description: "Array of nature of suit with each nature of suit separated by comma. Add the nature of suit in the array to narrow down your search further for the given nature of suit.\n\nPlease use the APPENDIX mentioned in the schema section below for Nature Of Suits.\n\n\tNote: Applicable only for Appellate and Civil Court types. Ex: If you wanted to apply '1110 - Insurance' in nature of suits for Appeal Courts then we would required only '1110' in the request"
         - schema:
             type: "string"
             format: date
@@ -591,7 +591,7 @@ paths:
               type: "string"
           in: "query"
           name: party_role
-          description: "Array of party codes with each party code separated by comma. Add the party codes in the array to narrow down your search further for the given party codes.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Party Codes.\n\n\tNOTE:\n\n\t* Party Codes can vary from court to court. Use party codes only if you know the exact party code used in the court regions which you will provide during requesting this API."
+          description: "Array of party codes with each party code separated by comma. Add the party codes in the array to narrow down your search further for the given party codes.\n\nPlease use the APPENDIX mentioned in the schema section below for Party Codes.\n\n\tNOTE:\n\n\t* Party Codes can vary from court to court. Use party codes only if you know the exact party code used in the court regions which you will provide during requesting this API."
         - schema:
             type: "boolean"
             default: False
@@ -604,7 +604,7 @@ paths:
               type: "string"
           in: "query"
           name: court_regions
-          description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Court Region."
+          description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below for Court Region."
         - schema:
             type: "string"
             format: date
@@ -859,7 +859,7 @@ paths:
               type: "string"
           in: "query"
           name: party_role
-          description: "Array of party codes with each party code separated by comma. Add the party codes in the array to narrow down your search further for the given party codes.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Party Codes.\n\n\tNOTE:\n\n\t* Party Codes can vary from court to court. Use party codes only if you know the exact party code used in the court regions which you will provide during requesting this API.\n\n\t* Party Codes are not applicable for Appellate Cases."
+          description: "Array of party codes with each party code separated by comma. Add the party codes in the array to narrow down your search further for the given party codes.\n\nPlease use the APPENDIX mentioned in the schema section below for Party Codes.\n\n\tNOTE:\n\n\t* Party Codes can vary from court to court. Use party codes only if you know the exact party code used in the court regions which you will provide during requesting this API.\n\n\t* Party Codes are not applicable for Appellate Cases."
         - schema:
             type: "boolean"
             default: False
@@ -872,7 +872,7 @@ paths:
               type: "string"
           in: "query"
           name: court_regions
-          description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Court Region."
+          description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below for Court Region."
         - schema:
             type: "string"
             format: date
@@ -1044,28 +1044,28 @@ paths:
                     properties:
                       each_case_type:
                         type: "string"
-                  description: "Array of case types with each case type separated by comma. You can mention the case types which you would like to do the search for. By default it will search in all the case types available for the respective court.\n\nPlease use this link to find all the case types available from all the courts - [Need a separate UniCourt Link] APPENDIX FOR Case Types."
+                  description: "Array of case types with each case type separated by comma. You can mention the case types which you would like to do the search for. By default it will search in all the case types available for the respective court.\n\nPlease use this link to find all the case types available from all the courts - [Need a separate UniCourt Link] APPENDIX for Case Types."
                 court_regions:
                   type: "array"
                   items:
                     properties:
                       each_court_region:
                         type: "string"
-                  description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Court Region."
+                  description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below for Court Region."
                 nature_of_suits:
                   type: "array"
                   items:
                     properties:
                       each_nature_of_suit:
                         type: "string"
-                  description: "Array of nature of suit with each nature of suit separated by comma. Add the nature of suit in the array to narrow down your search further for the given nature of suit.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Nature Of Suits.\n\n\tNote: Applicable only for Appellate and Civil Court types. Ex: If you wanted to apply '1110 - Insurance' in nature of suits for Appeal Courts then we would required only '1110' in the request"
+                  description: "Array of nature of suit with each nature of suit separated by comma. Add the nature of suit in the array to narrow down your search further for the given nature of suit.\n\nPlease use the APPENDIX mentioned in the schema section below for Nature Of Suits.\n\n\tNote: Applicable only for Appellate and Civil Court types. Ex: If you wanted to apply '1110 - Insurance' in nature of suits for Appeal Courts then we would required only '1110' in the request"
                 chapters:
                   type: "array"
                   items:
                     properties:
                       each_chapter:
                         type: "string"
-                  description: "Array of bankruptcy chapters with each chapter separated by comma. Add bankruptcy chapters in the array to narrow down your search further for the given chapters.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Bankruptcy Chapters.\n\n\tNote: Applicable only for Bankruptcy Court type."
+                  description: "Array of bankruptcy chapters with each chapter separated by comma. Add bankruptcy chapters in the array to narrow down your search further for the given chapters.\n\nPlease use the APPENDIX mentioned in the schema section below for Bankruptcy Chapters.\n\n\tNote: Applicable only for Bankruptcy Court type."
                 case_filed_start_date:
                   type: "string"
                   format: date
@@ -1248,7 +1248,7 @@ paths:
                   description: "Search will be made on the exact match of the party names. If the parameter is set to False then any parties whose name starts with the given party name will be fetched in the results."
                 party_role:
                   type: "string"
-                  description: "Array of party codes with each party code separated by comma. Add the party codes in the array to narrow down your search further for the given party codes.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Party Codes.\n\n\tNOTE:\n\n\t* Party Codes can vary from court to court. Use party codes only if you know the exact party code used in the court regions which you will provide during requesting this API.\n\n\t* Party Codes are not applicable for Appellate Cases."
+                  description: "Array of party codes with each party code separated by comma. Add the party codes in the array to narrow down your search further for the given party codes.\n\nPlease use the APPENDIX mentioned in the schema section below for Party Codes.\n\n\tNOTE:\n\n\t* Party Codes can vary from court to court. Use party codes only if you know the exact party code used in the court regions which you will provide during requesting this API.\n\n\t* Party Codes are not applicable for Appellate Cases."
                 court_type:
                   type: "string"
                   description: "Court Types of PACER."
@@ -1290,28 +1290,28 @@ paths:
                     properties:
                       each_case_type:
                         type: "string"
-                  description: "Array of case types with each case type separated by comma. You can mention the case types which you would like to do the search for. By default it will search in all the case types available for the respective court.\n\nPlease use this link to find all the case types available from all the courts - [Need a separate UniCourt Link] APPENDIX FOR Case Types."
+                  description: "Array of case types with each case type separated by comma. You can mention the case types which you would like to do the search for. By default it will search in all the case types available for the respective court.\n\nPlease use this link to find all the case types available from all the courts - [Need a separate UniCourt Link] APPENDIX for Case Types."
                 court_regions:
                   type: "array"
                   items:
                     properties:
                       each_court_region:
                         type: "string"
-                  description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Court Region."
+                  description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below for Court Region."
                 nature_of_suits:
                   type: "array"
                   items:
                     properties:
                       each_nature_of_suit:
                         type: "string"
-                  description: "Array of nature of suit with each nature of suit separated by comma. Add the nature of suit in the array to narrow down your search further for the given nature of suit.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Nature Of Suits.\n\n\tNote: Applicable only for Appellate and Civil Court types. Ex: If you wanted to apply '1110 - Insurance' in nature of suits for Appeal Courts then we would required only '1110' in the request"
+                  description: "Array of nature of suit with each nature of suit separated by comma. Add the nature of suit in the array to narrow down your search further for the given nature of suit.\n\nPlease use the APPENDIX mentioned in the schema section below for Nature Of Suits.\n\n\tNote: Applicable only for Appellate and Civil Court types. Ex: If you wanted to apply '1110 - Insurance' in nature of suits for Appeal Courts then we would required only '1110' in the request"
                 chapters:
                   type: "array"
                   items:
                     properties:
                       each_chapter:
                         type: "string"
-                  description: "Array of bankruptcy chapters with each chapter separated by comma. Add bankruptcy chapters in the array to narrow down your search further for the given chapters.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Bankruptcy Chapters.\n\n\tNote: Applicable only for Bankruptcy Court type."
+                  description: "Array of bankruptcy chapters with each chapter separated by comma. Add bankruptcy chapters in the array to narrow down your search further for the given chapters.\n\nPlease use the APPENDIX mentioned in the schema section below for Bankruptcy Chapters.\n\n\tNote: Applicable only for Bankruptcy Court type."
                 case_filed_start_date:
                   type: "string"
                   format: date
@@ -1505,7 +1505,7 @@ paths:
                   description: "Search will be made on the exact match of the party names. If the parameter is set to False then any parties whose name starts with the given party name will be fetched in the results."
                 party_role:
                   type: "string"
-                  description: "Array of party codes with each party code separated by comma. Add the party codes in the array to narrow down your search further for the given party codes.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Party Codes.\n\n\tNOTE:\n\n\t* Party Codes can vary from court to court. Use party codes only if you know the exact party code used in the court regions which you will provide during requesting this API.\n\n\t* Party Codes are not applicable for Appellate Cases."
+                  description: "Array of party codes with each party code separated by comma. Add the party codes in the array to narrow down your search further for the given party codes.\n\nPlease use the APPENDIX mentioned in the schema section below for Party Codes.\n\n\tNOTE:\n\n\t* Party Codes can vary from court to court. Use party codes only if you know the exact party code used in the court regions which you will provide during requesting this API.\n\n\t* Party Codes are not applicable for Appellate Cases."
                 four_digit_ssn:
                   type: "integer"
                   description: "The last four digits of the Social Security Number can be used in the search criteria. But when using this field Last Name or Entity Name field is mandatory."
@@ -1540,21 +1540,21 @@ paths:
                     properties:
                       each_case_type:
                         type: "string"
-                  description: "Array of case types with each case type separated by comma. You can mention the case types which you would like to do the search for. By default it will search in all the case types available for the respective court.\n\nPlease use this link to find all the case types available from all the courts - [Need a separate UniCourt Link] APPENDIX FOR Case Types."
+                  description: "Array of case types with each case type separated by comma. You can mention the case types which you would like to do the search for. By default it will search in all the case types available for the respective court.\n\nPlease use this link to find all the case types available from all the courts - [Need a separate UniCourt Link] APPENDIX for Case Types."
                 court_regions:
                   type: "array"
                   items:
                     properties:
                       each_court_region:
                         type: "string"
-                  description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Court Region."
+                  description: "Array of court region with each court region separated by comma. Add the court regions in the array to narrow down your search further for the given court region.\n\nPlease use the APPENDIX mentioned in the schema section below for Court Region."
                 chapters:
                   type: "array"
                   items:
                     properties:
                       each_chapter:
                         type: "string"
-                  description: "Array of bankruptcy chapters with each chapter separated by comma. Add bankruptcy chapters in the array to narrow down your search further for the given chapters.\n\nPlease use the APPENDIX mentioned in the schema section below FOR Bankruptcy Chapters.\n\n\tNote: This parameter is applicable since we only perform this search for Bankruptcy Court type."
+                  description: "Array of bankruptcy chapters with each chapter separated by comma. Add bankruptcy chapters in the array to narrow down your search further for the given chapters.\n\nPlease use the APPENDIX mentioned in the schema section below for Bankruptcy Chapters.\n\n\tNote: This parameter is applicable since we only perform this search for Bankruptcy Court type."
                 case_filed_start_date:
                   type: "string"
                   format: date
@@ -2193,6 +2193,7 @@ components:
       - 12
       - 13
       - 15
+      - 360
 
     AppendixCaseType:
       type: string
@@ -2691,49 +2692,49 @@ components:
     AppendixNatureOfSuitCivil:
       type: string
       enum:
-      - 000 - Other Nature of Suit
-      - 110 - Insurance
+      - "000 - Other Nature of Suit"
+      - "110 - Insurance"
       - "120 - Contract: Marine"
-      - 130 - Miller Act
-      - 140 - Negotiable Instrument
+      - "130 - Miller Act"
+      - "140 - Negotiable Instrument"
       - "150 - Contract: Recovery/Enforcement"
       - "151 - Contract: Recovery Medicare"
       - "152 - Contract: Recovery Student Loan"
       - "153 - Contract: Recovery Veteran Benefits"
-      - 160 - Stockholders Suits
+      - "160 - Stockholders Suits"
       - "190 - Contract: Other"
-      - 195 - Contract Product Liability
+      - "195 - Contract Product Liability"
       - "196 - Contract: Franchise"
-      - 210 - Condemnation
+      - "210 - Condemnation"
       - "220 - Real Property: Foreclosure"
-      - 230 - Rent Lease & Ejectment
-      - 240 - Torts to Land
-      - 245 - Tort Product Liability
+      - "230 - Rent Lease & Ejectment"
+      - "240 - Torts to Land"
+      - "245 - Tort Product Liability"
       - "290 - Real Property: Other"
-      - 310 - Airplane
-      - 315 - Airplane Product Liability
-      - 320 - Assault Libel & Slander
-      - 330 - Federal Employer's Liability
-      - 340 - Marine
-      - 345 - Marine Product Liability
-      - 350 - Motor Vehicle
-      - 355 - Motor Vehicle Product Liability
-      - 360 - P.I.: Other
-      - 362 - Personal Injury Medical Malpractice
-      - 365 - Personal Injury Product Liability
-      - 367 - TORTS - Personal Injury - Health Care/Pharmaceutical Personal Injury/Product Liability
+      - "310 - Airplane"
+      - "315 - Airplane Product Liability"
+      - "320 - Assault Libel & Slander"
+      - "330 - Federal Employer's Liability"
+      - "340 - Marine"
+      - "345 - Marine Product Liability"
+      - "350 - Motor Vehicle"
+      - "355 - Motor Vehicle Product Liability"
+      - "360 - P.I.: Other"
+      - "362 - Personal Injury Medical Malpractice"
+      - "365 - Personal Injury Product Liability"
+      - "367 - TORTS - Personal Injury - Health Care/Pharmaceutical Personal Injury/Product Liability"
       - "368 - P.I.: Asbestos"
-      - 370 - Fraud or Truth-In-Lending
-      - 371 - Truth in Lending
-      - 375 - False Claims Act
-      - 376 - Qui Tam
+      - "370 - Fraud or Truth-In-Lending"
+      - "371 - Truth in Lending"
+      - "375 - False Claims Act"
+      - "376 - Qui Tam"
       - "380 - Personal Property: Other"
-      - 385 - Prop. Damage Prod. Liability
-      - 400 - State Reapportionment
-      - 410 - Anti-Trust
-      - 422 - Bankruptcy Appeal (801)
-      - 423 - Bankruptcy Withdrawal
-      - 430 - Banks and Banking
+      - "385 - Prop. Damage Prod. Liability"
+      - "400 - State Reapportionment"
+      - "410 - Anti-Trust"
+      - "422 - Bankruptcy Appeal (801)"
+      - "423 - Bankruptcy Withdrawal"
+      - "430 - Banks and Banking"
       - "440 - Civil Rights: Other"
       - "441 - Civil Rights: Voting"
       - "442 - Civil Rights: Jobs"
@@ -2742,25 +2743,25 @@ components:
       - "445 - Civil Rights: Americans with Disabilities - Employment"
       - "446 - Civil Rights: Americans with Disabilities - Other"
       - "448 - Civil Rights: Education"
-      - 450 - Commerce ICC Rates, Etc.
-      - 460 - Deportation
-      - 462 - Naturalization Application
-      - 463 - Habeas Corpus - Alien Detainee
-      - 465 - Other Immigration Actions
-      - 470 - Racketeer/Corrupt Organization
-      - 480 - Consumer Credit
-      - 485 - Telephone Consumer Protection Action (TCPA)
-      - 490 - Cable/Satellite TV
+      - "450 - Commerce ICC Rates, Etc."
+      - "460 - Deportation"
+      - "462 - Naturalization Application"
+      - "463 - Habeas Corpus - Alien Detainee"
+      - "465 - Other Immigration Actions"
+      - "470 - Racketeer/Corrupt Organization"
+      - "480 - Consumer Credit"
+      - "485 - Telephone Consumer Protection Action (TCPA)"
+      - "490 - Cable/Satellite TV"
       - "510 - Prisoner: Vacate Sentence"
-      - 530 - Habeas Corpus (General)
-      - 535 - Death Penalty - Habeas Corpus
-      - 540 - Mandamus & Other
+      - "530 - Habeas Corpus (General)"
+      - "535 - Death Penalty - Habeas Corpus"
+      - "540 - Mandamus & Other"
       - "550 - Prisoner: Civil Rights"
-      - 555 - Habeas Corpus (Prison Condition)
-      - 560 - Prisoner Petitions - Civil Detainee - Conditions of Confinement
+      - "555 - Habeas Corpus (Prison Condition)"
+      - "560 - Prisoner Petitions - Civil Detainee - Conditions of Confinement"
       - "610 - Forfeit/Penalty: Agriculture"
       - "620 - Forfeit/Penalty: Food and Drug"
-      - 625 - Drug Related Seizure of Property"
+      - "625 - Drug Related Seizure of Property"
       - "630 - Forfeit/Penalty: Liquor Laws"
       - "640 - Forfeit/Penalty: R.R. & Truck"
       - "650 - Forfeit/Penalty: Airline Regulations"
@@ -2773,30 +2774,31 @@ components:
       - "751 - Labor: Family and Medical Leave Act"
       - "790 - Labor: Other"
       - "791 - Labor: E.R.I.S.A."
-      - 810 - Selective Service
-      - 820 - Copyright
-      - 830 - Patent
-      - 835 - Abbreviated New Drug Applications
-      - 840 - Trademark
-      - 850 - Securities/Commodities
+      - "810 - Selective Service"
+      - "820 - Copyright"
+      - "830 - Patent"
+      - "835 - Abbreviated New Drug Applications"
+      - "840 - Trademark"
+      - "850 - Securities/Commodities"
       - "861 - Social Security: HIA"
       - "862 - Social Security: Black Lung"
       - "863 - Social Security: DIWC/DIWW"
       - "864 - Social Security: SSID Tit. XVI"
       - "865 - Social Security: RSI Tax Suits"
-      - 870 - Taxes
+      - "870 - Taxes"
       - "871 - Tax Suits: IRS-Third Party"
       - "875 - Taxes: Customer Challenge"
-      - 890 - Other Statutory Actions
-      - 891 - Agriculture Acts
-      - 892 - Economic Stabilization Act
-      - 893 - Environmental Matters
-      - 894 - Energy Allocation Act
-      - 895 - Freedom of Information Act
-      - 896 - Other Statues - Arbitration
-      - 899 - Other Statues - Administrative Procedure Act/Review or Appeal of Agency Decision
-      - 900 - Appeal of Fee Determination
-      - 950 - Constitutional - State Statute
+      - "880 - Defend Trade Secrets Act of 2016 (DTSA)"
+      - "890 - Other Statutory Actions"
+      - "891 - Agriculture Acts"
+      - "892 - Economic Stabilization Act"
+      - "893 - Environmental Matters"
+      - "894 - Energy Allocation Act"
+      - "895 - Freedom of Information Act"
+      - "896 - Other Statues - Arbitration"
+      - "899 - Other Statues - Administrative Procedure Act/Review or Appeal of Agency Decision"
+      - "900 - Appeal of Fee Determination"
+      - "950 - Constitutional - State Statute"
 
     AppendixPartyRole:
       type: string
